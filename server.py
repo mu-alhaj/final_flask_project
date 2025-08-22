@@ -19,6 +19,9 @@ def emotion_detector_fun():
     and 'sadness': {response['sadness']}. \
     The dominant emotion is {response['dominant_emotion']}."
 
+    if response['dominant_emotion'] is None:
+        return "Invalid text! Please try again."
+
     return output_text
 
 
